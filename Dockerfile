@@ -3,8 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /source
 
 # copy everything else and build app
-COPY . ./BMW.Hold.Api/
-WORKDIR /source/BMW.Hold.Api
+COPY . ./helloapi/
+WORKDIR /source/helloapi
 RUN dotnet publish -c release -o /app
 
 # final stage/image
